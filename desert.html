@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>desert-site</title>
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.css">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      font-family:impact;
+    }
+    body{
+      width:100%;
+      background-image:linear-gradient(white,gold);
+      height:100vh;
+    }
+    header{
+      width:80%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:100px;
+    }
+    header a{
+      text-decoration:none;
+      font-size:40px;
+      color:orange;
+      text-transform:capitalize;
+      margin-left:20px;
+    }
+    header nav img{
+      display:none;
+    }
+    header nav ul{
+      display:flex;
+      justify-content:space-between;
+      list-style-type:none;
+    }
+    header nav ul li {
+      color:goldenrod;
+      margin:30px;
+      margin-left:100px;
+    }
+    header nav ul li:hover{
+      color:#222;
+    }
+    div{
+      display:none;
+    }
+    section{
+      width:80%;
+      margin-left:30px;
+    }
+    section h2{
+     font-size:30px;
+     font-family:serif;
+    }
+    section p{
+      width:100%;
+      color:orange;
+    }
+    section button{
+      background-color:orange;
+      color:black;
+      width:100px;
+      height:25px;
+      border:none;
+      border-radius:20px;
+      margin-top:30px;
+    }
+    section button:hover{
+      background-color:silver;
+      color:black;
+      transition:1.3s;
+      letter-spacing:1px;
+      transform:scale(1.1);
+    }
+    @media screen and (max-width:700px) {
+      header{
+        text-align:center;
+        width:100%;
+        display:block;
+      }
+      header nav img{
+        display:block;
+        position:absolute;
+        left:20px;
+        top:20px;
+      }
+      header nav ul{
+        display:block;
+        position: relative;
+        left:-50px;
+      }
+      .hidden{
+        display: none;
+      }
+      div{
+        position: relative;
+        top:-40px;
+        display:block;
+        width:100px;
+        color:orange;
+      }
+      section{
+        margin-left:130px;
+        width:40%;
+        height:100v;
+      }
+      section h2{
+        text-align:center;
+      }
+      section button{
+        width:200px;
+        position: relative;
+        left:-40px;
+        top:-20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#">desert</a>
+    <nav>
+      <div class="px-4 cursor-pointer md:hidden" id="burger">
+        <svg class="w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </div>
+      <ul class="hidden" id="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Location</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>Find Your Way</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nostrum ratione similique, fugit rem beatae quisquam adipisci exercitationem aliquam earum. Autem similique laboriosam, totam reiciendis et modi asperiores eligendi accusamus eveniet possimus dolorem vitae adipisci cumque optio deserunt quisquam ad.</p>
+    <button>Join Us</button>
+  </section>
+  <script>
+  const burger = document.querySelector('#burger');
+const menu = document.querySelector('#menu');
+burger.addEventListener('click', (e) => {
+  if (menu.classList.contains('hidden')) {
+    menu.classList.remove('hidden');
+  } else {
+    menu.classList.add('hidden');
+  }
+});
+  </script>
+</body>
+</html>
